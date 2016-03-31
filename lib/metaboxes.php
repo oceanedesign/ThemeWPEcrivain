@@ -70,13 +70,13 @@ function livre_metabox() {
 		'object_types'  => array( 'livre')
 	) );
 	
-	//Bugué?
+	//Trouvé comment récup' custom type
 	$cmb_livre->add_field( array(
 	    'name'     => 'Auteur',
 	    'desc'     => 'L\'auteur du livre',
 	    'id'       => $prefix . 'auteur',
-	    'object_types' => 'ecrivain', // Enter Taxonomy Slug
-	    'type'     => 'taxonomy_radio',
+	    'taxonomy' => 'ecrivain', // Enter Taxonomy Slug
+	    'type'     => 'taxonomy_select',
 	    // Optional:
 	    'options' => array(
 	        'no_terms_text' => 'Sorry, no terms could be found.' // Change default text. Default: "No terms"

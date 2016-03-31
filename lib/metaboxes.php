@@ -51,3 +51,50 @@ function ecrivain_metabox() {
 	    ),
 	) );
 }
+
+/*===================================================================
+ x                                                                  x
+ x                    	 		Livres			                    x
+ x                                                                  x
+===================================================================*/
+
+add_action( 'cmb2_admin_init', 'livre_metabox' );
+function livre_metabox() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_livre_';
+
+	$cmb_livre = new_cmb2_box( array(
+		'id'            => $prefix . 'metabox',
+		'title'         => __( 'Livre Informations', 'starter' ),
+		'object_types'  => array( 'livre')
+	) );
+	
+	//Bugué?
+	$cmb_livre->add_field( array(
+	    'name'     => 'Auteur',
+	    'desc'     => 'L\'auteur du livre',
+	    'id'       => $prefix . 'auteur',
+	    'object_types' => 'ecrivain', // Enter Taxonomy Slug
+	    'type'     => 'taxonomy_radio',
+	    // Optional:
+	    'options' => array(
+	        'no_terms_text' => 'Sorry, no terms could be found.' // Change default text. Default: "No terms"
+	    ),
+	) );
+
+	$cmb_livre->add_field( array(
+	    'name'    => 'Nombre de page',
+	    'desc'    => 'Mettez le nombre de page du livre',
+	    'default' => '263',
+	    'id'      => $prefix . 'page',
+	    'type'    => 'text_small'
+	) );
+	$cmb_livre->add_field( array(
+	    'name'    => 'Saga',
+	    'desc'    => 'Entrez (s\'il y en a) la saga du livre',
+	//    'default' => 'standard value (optional)',
+	    'id'      => $prefix . 'saga',
+	    'type'    => 'text_medium'
+	) );
+}

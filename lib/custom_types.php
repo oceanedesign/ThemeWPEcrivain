@@ -33,7 +33,7 @@ function custom_ecrivain_type() {
 		'label'                 => __( 'Ecrivain', 'starter' ),
 		'description'           => __( 'Ecrivain', 'starter' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', ),
+		'supports'              => array( 'title', 'editor','excerpt', 'thumbnail', ),
 		'taxonomies'            => array( 'category', 'langue' ),
 		'hierarchical'          => false,
 		'public'                => true,

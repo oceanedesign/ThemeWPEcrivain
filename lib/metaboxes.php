@@ -58,7 +58,7 @@ function ecrivain_metabox() {
 	    'id'      => $prefix . 'metier',
 	    'type'    => 'text'
 	) );
-/*
+
 	$cmb_ecrivain->add_field( array(
 	    'name'    => 'Thématiques',
 	    'desc'    => 'Entrez les principales thématiques abordées par l\'auteur',
@@ -66,7 +66,6 @@ function ecrivain_metabox() {
 	    'id'      => $prefix . 'thematique',
 	    'type'    => 'text'
 	) );
-	*/
 }
 
 /*===================================================================
@@ -87,19 +86,13 @@ function livre_metabox() {
 		'object_types'  => array( 'livre')
 	) );
 	
-	//Trouvé comment récup' custom type
 	$cmb_livre->add_field( array(
-	    'name'     => 'Auteur',
-	    'desc'     => 'L\'auteur du livre',
-	    'id'       => $prefix . 'auteur',
-	    'taxonomy' => 'ecrivain', // Enter Taxonomy Slug
-	    'type'     => 'taxonomy_select',
-	    // Optional:
-	    'options' => array(
-	        'no_terms_text' => 'Sorry, no terms could be found.' // Change default text. Default: "No terms"
-	    ),
-	) );
-
+			'name' => 'Auteur',
+			'desc' => 'L\'auteur du livre',
+			'id'   => $prefix . 'auteur',
+			'type' => 'select',
+			'options' => 'get_ecrivains_array'
+	) );	
 	$cmb_livre->add_field( array(
 	    'name'    => 'Nombre de page',
 	    'desc'    => 'Mettez le nombre de page du livre',

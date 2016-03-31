@@ -1,8 +1,8 @@
 <?php 
-/*	$facebook_url   = get_post_meta( get_the_ID(), '_dance_dancer_social_facebook', true );
-	$twitter_url   = get_post_meta( get_the_ID(), '_dance_dancer_social_twitter', true );
-	$color   = get_post_meta( get_the_ID(), '_dance_dancer_social_dancer_color', true );
-	$galery = get_post_meta(get_the_ID(), '_dance_dancer_options_galery', true );*/
+	$anneeN   = get_post_meta( get_the_ID(), '_ecrivain_anneeN', true );
+	$anneeM   = get_post_meta( get_the_ID(), '_ecrivain_anneeM', true );
+	$metier   = get_post_meta( get_the_ID(), '_ecrivain_metier', true );
+	$thematique   = get_post_meta( get_the_ID(), '_ecrivain_thematique', true );
 ?>
 <div class="thumbnail dancer">
 	<?php if(has_post_thumbnail($post->ID)) : ?>
@@ -19,4 +19,10 @@
 	<?php the_taxonomies();?>
     <?php the_content( ); ?>
   </div>
+</div>
+
+<div>
+	<p>L'auteur est née en <?php echo $anneeN; ?> et il est mort en <?php echo $anneeM; ?>!</p>
+	<p>L'auteur était <?php echo $metier; ?> dans la vie de tous les jours.</p>
+	<p>L'auteur abordait des thématiques variés tels que <?php echo $thematique; ?>.</p>
 </div>

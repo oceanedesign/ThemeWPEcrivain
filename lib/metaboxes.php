@@ -40,15 +40,16 @@ function ecrivain_metabox() {
 	) );
 	
 	$cmb_ecrivain->add_field( array(
-	    'name'     => 'siecle',
-	    'desc'     => 'Siècle de l\'auteur',
-	    'id'       => $prefix . 'siecle',
-	    'taxonomy' => 'siecle', // Enter Taxonomy Slug
-	    'type'     => 'taxonomy_radio',
-	    // Optional:
-	    'options' => array(
-	        'no_terms_text' => 'Sorry, no terms could be found.' // Change default text. Default: "No terms"
-	    ),
+	    'name'     => 'Année de Naissance',
+	    'desc'     => 'Année de naissance de l\'auteur',
+	    'id'       => $prefix . 'anneeN',
+	    'type'     => 'text_small',
+	) );
+	$cmb_ecrivain->add_field( array(
+	    'name'     => 'Année de Mort',
+	    'desc'     => 'Année de mort de l\'auteur',
+	    'id'       => $prefix . 'anneeM',
+	    'type'     => 'text_small',
 	) );
 
 	$cmb_ecrivain->add_field( array(

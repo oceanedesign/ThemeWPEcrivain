@@ -50,6 +50,23 @@ function ecrivain_metabox() {
 	        'no_terms_text' => 'Sorry, no terms could be found.' // Change default text. Default: "No terms"
 	    ),
 	) );
+
+	$cmb_ecrivain->add_field( array(
+	    'name'    => 'Métier',
+	    'desc'    => 'Entrez l\'activité principale de l\'auteur',
+	    'default' => 'Ecrivain',
+	    'id'      => $prefix . 'metier',
+	    'type'    => 'text'
+	) );
+/*
+	$cmb_ecrivain->add_field( array(
+	    'name'    => 'Thématiques',
+	    'desc'    => 'Entrez les principales thématiques abordées par l\'auteur',
+	//    'default' => 'Ecrivain',
+	    'id'      => $prefix . 'thematique',
+	    'type'    => 'text'
+	) );
+	*/
 }
 
 /*===================================================================

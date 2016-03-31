@@ -1,7 +1,7 @@
 <?php
 
 ?>
-<?php get_header(); ?>
+<?php get_header(); ?> 
 <div class="row">
 	<div class="col-md-12">
 	<?php if ( have_posts() ) : ?>

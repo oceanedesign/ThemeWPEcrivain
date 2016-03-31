@@ -10,10 +10,6 @@
 	<?php else:?>
 		<?php echo '<img src="https://unsplash.it/300/?random" />'; ?>
 	<?php endif;?>
-	<div class="caption">
-		<a style="color:<?php echo $color; ?>" href="<?php echo esc_url($facebook_url); ?>"><i class="fa fa-facebook-official fa-3x"></i></a>
-		<a style="color:<?php echo $color; ?>" href="<?php echo esc_url($twitter_url); ?>"><i class="fa fa-twitter fa-3x"></i></a>
-	</div>
 </div>
 <div class="panel panel-default">
   <div class="panel-heading">
@@ -24,4 +20,3 @@
     <?php the_content( ); ?>
   </div>
 </div>
-<?php cmb2_output_file_list( 'wiki_test_file_list', 'medium' ); ?>

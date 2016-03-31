@@ -5,7 +5,7 @@ function langue_taxonomy() {
 	$labels = array(
 		'name'                       => _x( 'Langues', 'Taxonomy General Name', 'starter' ),
 		'singular_name'              => _x( 'Langue', 'Taxonomy Singular Name', 'starter' ),
-		'menu_name'                  => __( 'Taxonomy', 'starter' ),
+		'menu_name'                  => __( 'Langues', 'starter' ),
 		'all_items'                  => __( 'All Langues', 'starter' ),
 		'parent_item'                => __( 'Parent Langue', 'starter' ),
 		'parent_item_colon'          => __( 'Parent Langue:', 'starter' ),
@@ -44,7 +44,7 @@ function annee_sortie_taxonomy() {
 	$labels = array(
 		'name'                       => _x( 'Années de sortie', 'Taxonomy General Name', 'starter' ),
 		'singular_name'              => _x( 'Année de sortie', 'Taxonomy Singular Name', 'starter' ),
-		'menu_name'                  => __( 'Taxonomy', 'starter' ),
+		'menu_name'                  => __( 'Année de sortie', 'starter' ),
 		'all_items'                  => __( 'All Années de sortie', 'starter' ),
 		'parent_item'                => __( 'Parent Année de sortie', 'starter' ),
 		'parent_item_colon'          => __( 'Parent Année de sortie:', 'starter' ),

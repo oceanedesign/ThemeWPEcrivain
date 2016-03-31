@@ -24,13 +24,13 @@ $args = array (
 		'opt_name' => $opt_name,
 		'use_cdn' => TRUE,
 		'page_slug' => '_options',
-		'page_title' => 'Music Theme Options',
+		'page_title' => 'Ecriture Theme Options',
 		'update_notice' => TRUE,
-		'intro_text' => '<p>Introduction Text</p>',
-		'footer_text' => '<p>Footer Text</p>',
+//		'intro_text' => '<p>Introduction Text</p>',
+//		'footer_text' => '<p>Footer Text</p>',
 		'admin_bar' => TRUE,
 		'menu_type' => 'menu',
-		'menu_title' => 'Theme Options',
+		'menu_title' => 'Paramètres du thème',
 		'allow_sub_menu' => TRUE,
 		'page_parent_post_type' => 'your_post_type',
 		'customizer' => TRUE,
@@ -67,31 +67,32 @@ $args = array (
 		'transient_time' => '3600',
 		'network_sites' => TRUE,
 		'display_version' => '1.0',
-		'display_name' => 'Music Theme Options' ,
+		'display_name' => 'Ecriture Theme Options' ,
 		'dev_mode' => false
 );
 
 // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
 $args ['share_icons'] [] = array (
-		'url' => 'https://github.com/ReduxFramework/ReduxFramework',
-		'title' => 'Visit us on GitHub',
+		'url' => 'https://github.com/oceaneteyre',
+		'title' => 'Visit me on GitHub',
 		'icon' => 'el el-github' 
 );
 // 'img' => '', // You can use icon OR img. IMG needs to be a full URL.
-
+/*
 $args ['share_icons'] [] = array (
 		'url' => 'https://www.facebook.com/pages/Redux-Framework/243141545850368',
 		'title' => 'Like us on Facebook',
 		'icon' => 'el el-facebook' 
 );
+*/
 $args ['share_icons'] [] = array (
-		'url' => 'http://twitter.com/reduxframework',
-		'title' => 'Follow us on Twitter',
+		'url' => 'https://twitter.com/oceaneteyre',
+		'title' => 'Follow me on Twitter',
 		'icon' => 'el el-twitter' 
 );
 $args ['share_icons'] [] = array (
-		'url' => 'http://www.linkedin.com/company/redux-framework',
-		'title' => 'Find us on LinkedIn',
+		'url' => 'https://www.linkedin.com/in/oceaneteyre',
+		'title' => 'Find me on LinkedIn',
 		'icon' => 'el el-linkedin' 
 );
 
@@ -152,7 +153,22 @@ Redux::setSection ( $opt_name, array (
 						        )
 						    ),
 						    'default' => 'container'
-				)
+				),
+				array(
+				    'id'       => 'opt-color',
+				    'type'     => 'color',
+				    'title'    => __('Body Background Color', 'starter'), 
+				    'subtitle' => __('Pick a background color for the theme (default: #fff).', 'starter'),
+				    'default'  => '#FFFFFF',
+				    'validate' => 'color',
+				),
+				array(
+				    'id'       => 'opt-switch',
+				    'type'     => 'switch', 
+				    'title'    => __('ON ou OFF?', 'starter'),
+				    'subtitle' => __('Pour passer qqc en true ou false', 'starter'),
+				    'default'  => true,
+				),
 		)
 ) );
 
